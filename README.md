@@ -1,5 +1,5 @@
 ## SERVER START
-POSTGRES_USER=postgres POSTGRES_PASSWORD=postgres docker-compose up -d
+POSTGRES_USER=postgres POSTGRES_PASSWORD=postgres SECRET=secret docker-compose up -d
 
 ## POSTGRES BUILD
 docker build -t misticwonder/postgres .
