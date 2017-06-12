@@ -1,0 +1,96 @@
+version: "3"
+services:
+  watchtower:
+    image: "centurylink/watchtower"
+    restart: always
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    command: --interval 300 --cleanup
+
+  caddy:
+    image: "abiosoft/caddy"
+    restart: always
+    environment:
+      CADDYPATH: "/etc/caddycerts"
+    volumes:
+      - ./caddy/Caddyfile:/etc/Caddyfile:ro
+      - ~/server/caddycerts:/etc/caddycerts
+    ports:
+      - "80:80"
+      - "443:443"
+
+  postgres:
+    image: "misticwonder/postgres"
+    restart: always
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      PGDATA: "/var/lib/postgresql/data"
+    volumes:
+      - ~/server/postgresql:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+  awix-api-production:
+    image: "misticwonder/awix-api-production"
+    restart: always
+    environment:
+      NODE_ENV: "production"
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    depends_on:
+      - postgres
+
+  awix-api-development:
+    image: "misticwonder/awix-api-development"
+    restart: always
+    environment:
+      NODE_ENV: "development"
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    depends_on:
+      - postgres
+
+  awix-frontend-production:
+    image: "misticwonder/awix-frontend-production"
+    restart: always
+    depends_on:
+      - awix-api-production
+
+  awix-frontend-development:
+    image: "misticwonder/awix-frontend-development"
+    restart: always
+    depends_on:
+      - awix-api-development
+
+  clubnika-api-production:
+    image: "misticwonder/clubnika-api-production"
+    restart: always
+    environment:
+      NODE_ENV: "production"
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    depends_on:
+      - postgres
+
+  clubnika-api-development:
+    image: "misticwonder/awix-api-development"
+    restart: always
+    environment:
+      NODE_ENV: "development"
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    depends_on:
+      - postgres
+
+  clubnika-frontend-production:
+    image: "misticwonder/clubnika-frontend-production"
+    restart: always
+    depends_on:
+      - clubnika-api-production
+
+  clubnika-frontend-development:
+    image: "misticwonder/clubnika-frontend-development"
+    restart: always
+    depends_on:
+      - clubnika-api-development

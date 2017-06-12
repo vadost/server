@@ -1,0 +1,49 @@
+https://api.awix.io {
+  proxy / awix-api-production:80
+  tls misticwonder@gmail.com
+  gzip
+}
+
+https://development.api.awix.io {
+  proxy / awix-api-development:80
+  tls misticwonder@gmail.com
+  gzip
+}
+
+https://awix.io {
+  proxy / awix-frontend-production:80
+  tls misticwonder@gmail.com
+  gzip
+}
+
+https://development.awix.io {
+  proxy / awix-frontend-development:80
+  tls misticwonder@gmail.com
+  gzip
+}
+
+
+
+https://api.clubnika.org {
+  proxy / clubnika-api-production:80
+  tls misticwonder@gmail.com
+  gzip
+}
+
+https://development.api.clubnika.org {
+  proxy / clubnika-api-development:80
+  tls misticwonder@gmail.com
+  gzip
+}
+
+https://clubnika.org {
+  proxy / clubnika-frontend-production:80
+  tls misticwonder@gmail.com
+  gzip
+}
+
+https://development.clubnika.org {
+  proxy / clubnika-frontend-development:80
+  tls misticwonder@gmail.com
+  gzip
+}
