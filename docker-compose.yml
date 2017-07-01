@@ -80,7 +80,7 @@ services:
       - postgres
 
   clubnika-api-development:
-    image: "misticwonder/awix-api-development"
+    image: "misticwonder/clubnika-api-development"
     restart: always
     environment:
       NODE_ENV: "development"
