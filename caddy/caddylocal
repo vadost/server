@@ -9,12 +9,12 @@ http://development.api.awix.localhost {
 }
 
 http://awix.localhost {
-  proxy / awix-frontend-production:80
+  proxy / awix-frontend-production:5000
   gzip
 }
 
 http://development.awix.localhost {
-  proxy / awix-frontend-development:80
+  proxy / awix-frontend-development:5000
   gzip
 }
 
@@ -31,11 +31,11 @@ http://development.api.clubnika.localhost {
 }
 
 http://clubnika.localhost {
-  proxy / clubnika-frontend-production:80
+  proxy / clubnika-frontend-production:5000
   gzip
 }
 
 http://development.clubnika.localhost {
-  proxy / clubnika-frontend-development:80
+  proxy / clubnika-frontend-development:5000
   gzip
 }

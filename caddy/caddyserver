@@ -11,13 +11,13 @@ https://development.api.awix.io {
 }
 
 https://awix.io {
-  proxy / awix-frontend-production:80
+  proxy / awix-frontend-production:5000
   tls misticwonder@gmail.com
   gzip
 }
 
 https://development.awix.io {
-  proxy / awix-frontend-development:80
+  proxy / awix-frontend-development:5000
   tls misticwonder@gmail.com
   gzip
 }
@@ -37,13 +37,13 @@ https://development.api.clubnika.org {
 }
 
 https://clubnika.org {
-  proxy / clubnika-frontend-production:80
+  proxy / clubnika-frontend-production:5000
   tls misticwonder@gmail.com
   gzip
 }
 
 https://development.clubnika.org {
-  proxy / clubnika-frontend-development:80
+  proxy / clubnika-frontend-development:5000
   tls misticwonder@gmail.com
   gzip
 }
