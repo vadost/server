@@ -13,7 +13,7 @@ services:
     environment:
       CADDYPATH: "/etc/caddycerts"
     volumes:
-      - ./caddy/Caddyfile:/etc/Caddyfile:ro
+      - ./caddy/${CADDY_FILE}:/etc/Caddyfile:ro
       - ~/server/caddycerts:/etc/caddycerts
     ports:
       - "80:80"

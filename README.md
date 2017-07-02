@@ -1,5 +1,10 @@
 ## SERVER START
-POSTGRES_USER=postgres POSTGRES_PASSWORD=postgres POSTGRES_HOST=postgres SECRET=secret docker-compose up -d
+CADDY_FILE=caddylocal \
+POSTGRES_USER=postgres \
+POSTGRES_PASSWORD=postgres \
+POSTGRES_HOST=postgres \
+SECRET=secret \
+docker-compose up -d
 
 ## POSTGRES BUILD
 docker build -t misticwonder/postgres .

@@ -1,0 +1,41 @@
+http://api.awix.localhost {
+  proxy / awix-api-production:3000
+  gzip
+}
+
+http://development.api.awix.localhost {
+  proxy / awix-api-development:3000
+  gzip
+}
+
+http://awix.localhost {
+  proxy / awix-frontend-production:80
+  gzip
+}
+
+http://development.awix.localhost {
+  proxy / awix-frontend-development:80
+  gzip
+}
+
+
+
+http://api.clubnika.localhost {
+  proxy / clubnika-api-production:3000
+  gzip
+}
+
+http://development.api.clubnika.localhost {
+  proxy / clubnika-api-development:3000
+  gzip
+}
+
+http://clubnika.localhost {
+  proxy / clubnika-frontend-production:80
+  gzip
+}
+
+http://development.clubnika.localhost {
+  proxy / clubnika-frontend-development:80
+  gzip
+}
