@@ -6,6 +6,9 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
     command: --interval 300 --cleanup
+    networks:
+      nwk:
+        ipv4_address: 10.5.0.2
 
   caddy:
     image: "abiosoft/caddy"
@@ -18,6 +21,9 @@ services:
     ports:
       - "80:80"
       - "443:443"
+    networks:
+      nwk:
+        ipv4_address: 10.5.0.3
 
   postgres:
     image: "misticwonder/postgres"
@@ -30,6 +36,9 @@ services:
       - ~/server/postgresql:/var/lib/postgresql/data
     ports:
       - "5432:5432"
+    networks:
+      nwk:
+        ipv4_address: 10.5.0.4
 
   awix-api-production:
     image: "misticwonder/awix-api-production"
@@ -42,6 +51,9 @@ services:
       POSTGRES_HOST: ${POSTGRES_HOST}
     depends_on:
       - postgres
+    networks:
+      nwk:
+        ipv4_address: 10.5.0.5
 
   awix-api-development:
     image: "misticwonder/awix-api-development"
@@ -54,18 +66,27 @@ services:
       POSTGRES_HOST: ${POSTGRES_HOST}
     depends_on:
       - postgres
+    networks:
+      nwk:
+        ipv4_address: 10.5.0.6
 
   awix-frontend-production:
     image: "misticwonder/awix-frontend-production"
     restart: always
     depends_on:
       - awix-api-production
+    networks:
+      nwk:
+        ipv4_address: 10.5.0.7
 
   awix-frontend-development:
     image: "misticwonder/awix-frontend-development"
     restart: always
     depends_on:
       - awix-api-development
+    networks:
+      nwk:
+        ipv4_address: 10.5.0.8
 
   clubnika-api-production:
     image: "misticwonder/clubnika-api-production"
@@ -78,6 +99,9 @@ services:
       POSTGRES_HOST: ${POSTGRES_HOST}
     depends_on:
       - postgres
+    networks:
+      nwk:
+        ipv4_address: 10.5.0.9
 
   clubnika-api-development:
     image: "misticwonder/clubnika-api-development"
@@ -90,15 +114,32 @@ services:
       POSTGRES_HOST: ${POSTGRES_HOST}
     depends_on:
       - postgres
+    networks:
+      nwk:
+        ipv4_address: 10.5.0.10
 
   clubnika-frontend-production:
     image: "misticwonder/clubnika-frontend-production"
     restart: always
     depends_on:
       - clubnika-api-production
+    networks:
+      nwk:
+        ipv4_address: 10.5.0.11
 
   clubnika-frontend-development:
     image: "misticwonder/clubnika-frontend-development"
     restart: always
     depends_on:
       - clubnika-api-development
+    networks:
+      nwk:
+        ipv4_address: 10.5.0.12
+
+networks:
+  nwk:
+    driver: bridge
+    ipam:
+     config:
+       - subnet: 10.5.0.0/16
+         gateway: 10.5.0.1
