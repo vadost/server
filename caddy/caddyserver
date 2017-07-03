@@ -43,7 +43,7 @@ https://clubnika.org {
 }
 
 https://development.clubnika.org {
-  proxy / clubnika-frontend-development:5000
+  proxy / 10.5.0.12:5000
   tls misticwonder@gmail.com
   gzip
 }
