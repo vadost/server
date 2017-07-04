@@ -1,23 +1,23 @@
 https://api.awix.io {
-  proxy / awix-api-production:3000
+  proxy / 10.5.0.5:3000
   tls misticwonder@gmail.com
   gzip
 }
 
 https://development.api.awix.io {
-  proxy / awix-api-development:3000
+  proxy / 10.5.0.6:3000
   tls misticwonder@gmail.com
   gzip
 }
 
 https://awix.io {
-  proxy / awix-frontend-production:5000
+  proxy / 10.5.0.7:5000
   tls misticwonder@gmail.com
   gzip
 }
 
 https://development.awix.io {
-  proxy / awix-frontend-development:5000
+  proxy / 10.5.0.8:5000
   tls misticwonder@gmail.com
   gzip
 }
@@ -25,19 +25,19 @@ https://development.awix.io {
 
 
 https://api.clubnika.org {
-  proxy / clubnika-api-production:3000
+  proxy / 10.5.0.9:3000
   tls misticwonder@gmail.com
   gzip
 }
 
 https://development.api.clubnika.org {
-  proxy / clubnika-api-development:3000
+  proxy / 10.5.0.10:3000
   tls misticwonder@gmail.com
   gzip
 }
 
 https://clubnika.org {
-  proxy / clubnika-frontend-production:5000
+  proxy / 10.5.0.11:5000
   tls misticwonder@gmail.com
   gzip
 }
