@@ -17,7 +17,7 @@ services:
       CADDYPATH: "/etc/caddycerts"
     volumes:
       - ./caddy/${CADDY_FILE}:/etc/Caddyfile:ro
-      - ~/server/caddycerts:/etc/caddycerts
+      - ~/volumes/caddycerts:/etc/caddycerts
     ports:
       - "80:80"
       - "443:443"
@@ -33,7 +33,7 @@ services:
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
       PGDATA: "/var/lib/postgresql/data"
     volumes:
-      - ~/server/postgresql:/var/lib/postgresql/data
+      - ~/volumes/postgresql:/var/lib/postgresql/data
     ports:
       - "5432:5432"
     networks:
