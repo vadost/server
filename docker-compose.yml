@@ -70,8 +70,8 @@ services:
       nwk:
         ipv4_address: 10.5.0.6
 
-  awix-frontend-production:
-    image: "misticwonder/awix-frontend-production"
+  awix-biz-production:
+    image: "misticwonder/awix-biz-production"
     restart: always
     depends_on:
       - awix-api-production
@@ -79,8 +79,8 @@ services:
       nwk:
         ipv4_address: 10.5.0.7
 
-  awix-frontend-development:
-    image: "misticwonder/awix-frontend-development"
+  awix-biz-development:
+    image: "misticwonder/awix-biz-development"
     restart: always
     depends_on:
       - awix-api-development

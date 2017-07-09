@@ -8,12 +8,12 @@ http://development.api.awix.localhost {
   gzip
 }
 
-http://awix.localhost {
+http://biz.awix.localhost {
   proxy / 10.5.0.7:5000
   gzip
 }
 
-http://development.awix.localhost {
+http://development.biz.awix.localhost {
   proxy / 10.5.0.8:5000
   gzip
 }

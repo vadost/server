@@ -10,13 +10,13 @@ https://development.api.awix.io {
   gzip
 }
 
-https://awix.io {
+https://biz.awix.io {
   proxy / 10.5.0.7:5000
   tls misticwonder@gmail.com
   gzip
 }
 
-https://development.awix.io {
+https://development.biz.awix.io {
   proxy / 10.5.0.8:5000
   tls misticwonder@gmail.com
   gzip
