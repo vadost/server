@@ -18,24 +18,36 @@ http://development.biz.awix.localhost {
   gzip
 }
 
+http://awix.localhost {
+  proxy / 10.5.0.9:5000
+  gzip
+}
+
+http://development.awix.localhost {
+  proxy / 10.5.0.10:5000
+  gzip
+}
+
+
+
 
 
 http://api.clubnika.localhost {
-  proxy / 10.5.0.9:3000
+  proxy / 10.5.0.11:3000
   gzip
 }
 
 http://development.api.clubnika.localhost {
-  proxy / 10.5.0.10:3000
+  proxy / 10.5.0.12:3000
   gzip
 }
 
 http://clubnika.localhost {
-  proxy / 10.5.0.11:5000
+  proxy / 10.5.0.13:5000
   gzip
 }
 
 http://development.clubnika.localhost {
-  proxy / 10.5.0.12:5000
+  proxy / 10.5.0.14:5000
   gzip
 }

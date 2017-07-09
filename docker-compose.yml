@@ -88,6 +88,24 @@ services:
       nwk:
         ipv4_address: 10.5.0.8
 
+  awix-production:
+    image: "misticwonder/awix-production"
+    restart: always
+    networks:
+      nwk:
+        ipv4_address: 10.5.0.9
+
+  awix-development:
+    image: "misticwonder/awix-development"
+    restart: always
+    networks:
+      nwk:
+        ipv4_address: 10.5.0.10
+
+
+
+
+
   clubnika-api-production:
     image: "misticwonder/clubnika-api-production"
     restart: always
@@ -101,7 +119,7 @@ services:
       - postgres
     networks:
       nwk:
-        ipv4_address: 10.5.0.9
+        ipv4_address: 10.5.0.11
 
   clubnika-api-development:
     image: "misticwonder/clubnika-api-development"
@@ -116,7 +134,7 @@ services:
       - postgres
     networks:
       nwk:
-        ipv4_address: 10.5.0.10
+        ipv4_address: 10.5.0.12
 
   clubnika-frontend-production:
     image: "misticwonder/clubnika-frontend-production"
@@ -125,7 +143,7 @@ services:
       - clubnika-api-production
     networks:
       nwk:
-        ipv4_address: 10.5.0.11
+        ipv4_address: 10.5.0.13
 
   clubnika-frontend-development:
     image: "misticwonder/clubnika-frontend-development"
@@ -134,7 +152,7 @@ services:
       - clubnika-api-development
     networks:
       nwk:
-        ipv4_address: 10.5.0.12
+        ipv4_address: 10.5.0.14
 
 networks:
   nwk:
