@@ -44,8 +44,7 @@ services:
     image: "misticwonder/awix-api-production"
     restart: always
     environment:
-      NODE_ENV: "production"
-      SECRET: ${SECRET}
+      NODE_ENV: ${NODE_ENV}
       POSTGRES_USER: ${POSTGRES_USER}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
       POSTGRES_HOST: ${POSTGRES_HOST}
@@ -59,8 +58,7 @@ services:
     image: "misticwonder/awix-api-development"
     restart: always
     environment:
-      NODE_ENV: "development"
-      SECRET: ${SECRET}
+      NODE_ENV: ${NODE_ENV}
       POSTGRES_USER: ${POSTGRES_USER}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
       POSTGRES_HOST: ${POSTGRES_HOST}
@@ -110,8 +108,7 @@ services:
     image: "misticwonder/clubnika-api-production"
     restart: always
     environment:
-      NODE_ENV: "production"
-      SECRET: ${SECRET}
+      NODE_ENV: ${NODE_ENV}
       POSTGRES_USER: ${POSTGRES_USER}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
       POSTGRES_HOST: ${POSTGRES_HOST}
@@ -125,8 +122,7 @@ services:
     image: "misticwonder/clubnika-api-development"
     restart: always
     environment:
-      NODE_ENV: "development"
-      SECRET: ${SECRET}
+      NODE_ENV: ${NODE_ENV}
       POSTGRES_USER: ${POSTGRES_USER}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
       POSTGRES_HOST: ${POSTGRES_HOST}
