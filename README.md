@@ -3,7 +3,6 @@ NODE_ENV=development \
 CADDY_FILE=caddylocal \
 POSTGRES_USER=postgres \
 POSTGRES_PASSWORD=postgres \
-POSTGRES_HOST=postgres \
 docker-compose up -d
 
 ## POSTGRES BUILD
