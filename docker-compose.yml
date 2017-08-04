@@ -83,6 +83,8 @@ services:
   awix-production:
     image: "misticwonder/awix-production"
     restart: always
+    depends_on:
+      - awix-api-production
     networks:
       nwk:
         ipv4_address: 10.5.0.9
@@ -90,6 +92,8 @@ services:
   awix-development:
     image: "misticwonder/awix-development"
     restart: always
+    depends_on:
+      - awix-api-development
     networks:
       nwk:
         ipv4_address: 10.5.0.10
