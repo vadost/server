@@ -5,7 +5,7 @@ POSTGRES_USER=postgres \
 POSTGRES_PASSWORD=postgres \
 docker-compose up -d
 
-or create .dev file with
+or create .env file with
   NODE_ENV=production
   CADDY_FILE=caddyserver
   POSTGRES_USER=postgres
