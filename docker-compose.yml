@@ -5,7 +5,7 @@ services:
     restart: always
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-    command: --interval 300 --cleanup awix-api-production awix-api-development awix-biz-production awix-biz-development awix-production awix-development clubnika-api-production clubnika-api-development clubnika-frontend-production clubnika-frontend-development
+    command: --interval 300 --cleanup
     networks:
       nwk:
         ipv4_address: 10.5.0.2
