@@ -124,8 +124,8 @@ services:
       nwk:
         ipv4_address: 10.5.0.12
 
-  clubnika-frontend-production:
-    image: "misticwonder/clubnika-frontend-production"
+  clubnika-web-production:
+    image: "misticwonder/clubnika-web-production"
     restart: always
     depends_on:
       - clubnika-api-production
@@ -133,8 +133,8 @@ services:
       nwk:
         ipv4_address: 10.5.0.13
 
-  clubnika-frontend-development:
-    image: "misticwonder/clubnika-frontend-development"
+  clubnika-web-development:
+    image: "misticwonder/clubnika-web-development"
     restart: always
     depends_on:
       - clubnika-api-development
