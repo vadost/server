@@ -127,6 +127,8 @@ services:
   clubnika-web-production:
     image: "misticwonder/clubnika-web-production"
     restart: always
+    environment:
+      APP_NAME: web
     depends_on:
       - clubnika-api-production
     networks:
@@ -136,6 +138,8 @@ services:
   clubnika-web-development:
     image: "misticwonder/clubnika-web-development"
     restart: always
+    environment:
+      APP_NAME: web
     depends_on:
       - clubnika-api-development
     networks:
