@@ -33,21 +33,41 @@ http://development.awix.localhost {
 
 
 http://api.clubnika.localhost, http://www.api.clubnika.localhost {
+  redir 301 {
+    if {host} starts_with www.api.clubnika.localhost
+    / http://api.clubnika.localhost{uri}
+  }
+
   proxy / 10.5.0.11:3000
   gzip
 }
 
 http://development.api.clubnika.localhost, http://www.development.api.clubnika.localhost {
+  redir 301 {
+    if {host} starts_with www.development.api.clubnika.localhost
+    / http://development.api.clubnika.localhost{uri}
+  }
+
   proxy / 10.5.0.12:3000
   gzip
 }
 
 http://clubnika.localhost, http://www.clubnika.localhost {
+  redir 301 {
+    if {host} starts_with www.clubnika.localhost
+    / http://clubnika.localhost{uri}
+  }
+
   proxy / 10.5.0.13:5000
   gzip
 }
 
 http://development.clubnika.localhost, http://www.development.clubnika.localhost {
+  redir 301 {
+    if {host} starts_with www.development.clubnika.localhost
+    / http://development.clubnika.localhost{uri}
+  }
+
   proxy / 10.5.0.14:5000
   gzip
 }
