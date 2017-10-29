@@ -41,7 +41,7 @@ https://development.awix.io {
 https://api.clubnika.org, https://www.api.clubnika.org {
   redir 301 {
     if {host} starts_with www.api.clubnika.org
-    / http://api.clubnika.org{uri}
+    / https://api.clubnika.org{uri}
   }
 
   proxy / 10.5.0.11:3000
@@ -52,7 +52,7 @@ https://api.clubnika.org, https://www.api.clubnika.org {
 https://development.api.clubnika.org, https://www.development.api.clubnika.org {
   redir 301 {
     if {host} starts_with www.development.api.clubnika.org
-    / http://development.api.clubnika.org{uri}
+    / https://development.api.clubnika.org{uri}
   }
 
   proxy / 10.5.0.12:3000
@@ -63,7 +63,7 @@ https://development.api.clubnika.org, https://www.development.api.clubnika.org {
 https://clubnika.org, https://www.clubnika.org {
   redir 301 {
     if {host} starts_with www.clubnika.org
-    / http://clubnika.org{uri}
+    / https://clubnika.org{uri}
   }
 
   proxy / 10.5.0.13:5000
@@ -74,7 +74,7 @@ https://clubnika.org, https://www.clubnika.org {
 https://development.clubnika.org, https://www.development.clubnika.org {
   redir 301 {
     if {host} starts_with www.development.clubnika.org
-    / http://development.clubnika.org{uri}
+    / https://development.clubnika.org{uri}
   }
 
   proxy / 10.5.0.14:5000
