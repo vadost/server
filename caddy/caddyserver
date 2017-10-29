@@ -38,25 +38,25 @@ https://development.awix.io {
 
 
 
-https://api.clubnika.org {
+https://api.clubnika.org, https://api.clubnika.org {
   proxy / 10.5.0.11:3000
   tls misticwonder@gmail.com
   gzip
 }
 
-https://development.api.clubnika.org {
+https://development.api.clubnika.org, https://www.development.api.clubnika.org {
   proxy / 10.5.0.12:3000
   tls misticwonder@gmail.com
   gzip
 }
 
-https://clubnika.org {
+https://clubnika.org, https://www.clubnika.org {
   proxy / 10.5.0.13:5000
   tls misticwonder@gmail.com
   gzip
 }
 
-https://development.clubnika.org {
+https://development.clubnika.org, https://www.development.clubnika.org {
   proxy / 10.5.0.14:5000
   tls misticwonder@gmail.com
   gzip
