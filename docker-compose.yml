@@ -26,7 +26,7 @@ services:
         ipv4_address: 10.5.0.3
 
   postgres:
-    image: "misticwonder/postgres"
+    image: "vadost/postgres"
     restart: always
     environment:
       POSTGRES_USER: ${POSTGRES_USER}
@@ -41,7 +41,7 @@ services:
         ipv4_address: 10.5.0.4
 
   awix-api-production:
-    image: "misticwonder/awix-api-production"
+    image: "vadost/awix-api-production"
     restart: always
     environment:
       NODE_ENV: ${NODE_ENV}
@@ -52,7 +52,7 @@ services:
         ipv4_address: 10.5.0.5
 
   awix-api-development:
-    image: "misticwonder/awix-api-development"
+    image: "vadost/awix-api-development"
     restart: always
     environment:
       NODE_ENV: ${NODE_ENV}
@@ -63,7 +63,7 @@ services:
         ipv4_address: 10.5.0.6
 
   awix-biz-production:
-    image: "misticwonder/awix-biz-production"
+    image: "vadost/awix-biz-production"
     restart: always
     depends_on:
       - awix-api-production
@@ -72,7 +72,7 @@ services:
         ipv4_address: 10.5.0.7
 
   awix-biz-development:
-    image: "misticwonder/awix-biz-development"
+    image: "vadost/awix-biz-development"
     restart: always
     depends_on:
       - awix-api-development
@@ -81,7 +81,7 @@ services:
         ipv4_address: 10.5.0.8
 
   awix-production:
-    image: "misticwonder/awix-production"
+    image: "vadost/awix-production"
     restart: always
     depends_on:
       - awix-api-production
@@ -90,61 +90,13 @@ services:
         ipv4_address: 10.5.0.9
 
   awix-development:
-    image: "misticwonder/awix-development"
+    image: "vadost/awix-development"
     restart: always
     depends_on:
       - awix-api-development
     networks:
       nwk:
         ipv4_address: 10.5.0.10
-
-
-
-
-
-  clubnika-api-production:
-    image: "misticwonder/clubnika-api-production"
-    restart: always
-    environment:
-      NODE_ENV: ${NODE_ENV}
-    depends_on:
-      - postgres
-    networks:
-      nwk:
-        ipv4_address: 10.5.0.11
-
-  clubnika-api-development:
-    image: "misticwonder/clubnika-api-development"
-    restart: always
-    environment:
-      NODE_ENV: ${NODE_ENV}
-    depends_on:
-      - postgres
-    networks:
-      nwk:
-        ipv4_address: 10.5.0.12
-
-  clubnika-web-production:
-    image: "misticwonder/clubnika-web-production"
-    restart: always
-    environment:
-      APP_NAME: web
-    depends_on:
-      - clubnika-api-production
-    networks:
-      nwk:
-        ipv4_address: 10.5.0.13
-
-  clubnika-web-development:
-    image: "misticwonder/clubnika-web-development"
-    restart: always
-    environment:
-      APP_NAME: web
-    depends_on:
-      - clubnika-api-development
-    networks:
-      nwk:
-        ipv4_address: 10.5.0.14
 
 networks:
   nwk:

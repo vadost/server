@@ -13,11 +13,11 @@ or create .env file with
 and run docker-compose up -d
 
 ## POSTGRES BUILD
-docker build -t misticwonder/postgres .
-docker login -u="misticwonder" -p="password";
-docker push misticwonder/postgres
+docker build -t vadost/postgres .
+docker login -u="vadost" -p="password";
+docker push vadost/postgres
 
 ## SSH
-alias clubnika='ssh misticwonder@178.62.33.39'
-alias clubnikafs='sshfs misticwonder@178.62.33.39:~ ~/SERVER_MOUNT'
-alias clubnikafsu='fusermount -u ~/SERVER_MOUNT'
+alias awix='ssh vadost@46.101.237.67'
+alias awixfs='sshfs vadost@46.101.237.67:~ ~/SERVER_MOUNT'
+alias awixfsu='fusermount -u ~/SERVER_MOUNT'

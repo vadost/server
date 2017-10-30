@@ -1,83 +1,35 @@
 https://api.awix.io {
   proxy / 10.5.0.5:3000
-  tls misticwonder@gmail.com
+  tls vadoost@gmail.com
   gzip
 }
 
 https://development.api.awix.io {
   proxy / 10.5.0.6:3000
-  tls misticwonder@gmail.com
+  tls vadoost@gmail.com
   gzip
 }
 
 https://biz.awix.io {
   proxy / 10.5.0.7:5000
-  tls misticwonder@gmail.com
+  tls vadoost@gmail.com
   gzip
 }
 
 https://development.biz.awix.io {
   proxy / 10.5.0.8:5000
-  tls misticwonder@gmail.com
+  tls vadoost@gmail.com
   gzip
 }
 
 https://awix.io {
   proxy / 10.5.0.9:5000
-  tls misticwonder@gmail.com
+  tls vadoost@gmail.com
   gzip
 }
 
 https://development.awix.io {
   proxy / 10.5.0.10:5000
-  tls misticwonder@gmail.com
-  gzip
-}
-
-
-
-
-
-https://api.clubnika.org, https://www.api.clubnika.org {
-  redir 301 {
-    if {host} starts_with www.api.clubnika.org
-    / https://api.clubnika.org{uri}
-  }
-
-  proxy / 10.5.0.11:3000
-  tls misticwonder@gmail.com
-  gzip
-}
-
-https://development.api.clubnika.org, https://www.development.api.clubnika.org {
-  redir 301 {
-    if {host} starts_with www.development.api.clubnika.org
-    / https://development.api.clubnika.org{uri}
-  }
-
-  proxy / 10.5.0.12:3000
-  tls misticwonder@gmail.com
-  gzip
-}
-
-https://clubnika.org, https://www.clubnika.org {
-  redir 301 {
-    if {host} starts_with www.clubnika.org
-    / https://clubnika.org{uri}
-  }
-
-  proxy / 10.5.0.13:5000
-  tls misticwonder@gmail.com
-  gzip
-}
-
-https://development.clubnika.org, https://www.development.clubnika.org {
-  redir 301 {
-    if {host} starts_with www.development.clubnika.org
-    / https://development.clubnika.org{uri}
-  }
-
-  proxy / 10.5.0.14:5000
-  tls misticwonder@gmail.com
+  tls vadoost@gmail.com
   gzip
 }
