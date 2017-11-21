@@ -43,8 +43,6 @@ services:
   awix-biz-production:
     image: "vadost/awix-biz-production"
     restart: always
-    depends_on:
-      - awix-api-production
     networks:
       nwk:
         ipv4_address: 10.5.0.7
@@ -52,8 +50,6 @@ services:
   awix-biz-development:
     image: "vadost/awix-biz-development"
     restart: always
-    depends_on:
-      - awix-api-development
     networks:
       nwk:
         ipv4_address: 10.5.0.8
@@ -61,8 +57,6 @@ services:
   awix-production:
     image: "vadost/awix-production"
     restart: always
-    depends_on:
-      - awix-api-production
     networks:
       nwk:
         ipv4_address: 10.5.0.9
@@ -70,8 +64,6 @@ services:
   awix-development:
     image: "vadost/awix-development"
     restart: always
-    depends_on:
-      - awix-api-development
     networks:
       nwk:
         ipv4_address: 10.5.0.10
