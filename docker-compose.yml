@@ -40,28 +40,6 @@ services:
       nwk:
         ipv4_address: 10.5.0.4
 
-  awix-api-production:
-    image: "vadost/awix-api-production"
-    restart: always
-    environment:
-      NODE_ENV: ${NODE_ENV}
-    depends_on:
-      - postgres
-    networks:
-      nwk:
-        ipv4_address: 10.5.0.5
-
-  awix-api-development:
-    image: "vadost/awix-api-development"
-    restart: always
-    environment:
-      NODE_ENV: ${NODE_ENV}
-    depends_on:
-      - postgres
-    networks:
-      nwk:
-        ipv4_address: 10.5.0.6
-
   awix-biz-production:
     image: "vadost/awix-biz-production"
     restart: always

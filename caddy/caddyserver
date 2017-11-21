@@ -1,15 +1,3 @@
-https://api.awix.io {
-  proxy / 10.5.0.5:3000
-  tls vadoost@gmail.com
-  gzip
-}
-
-https://development.api.awix.io {
-  proxy / 10.5.0.6:3000
-  tls vadoost@gmail.com
-  gzip
-}
-
 https://biz.awix.io {
   proxy / 10.5.0.7:5000
   tls vadoost@gmail.com
