@@ -12,7 +12,6 @@ services:
 
   caddy:
     image: "abiosoft/caddy"
-    restart: always
     environment:
       CADDYPATH: "/etc/caddycerts"
     volumes:
